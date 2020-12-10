@@ -79,11 +79,15 @@ class Dog: public Animal{
         Dog(std::string, double, double, std::string);
         Dog(): Animal(){};
         void toString();
-
+        ~Dog();
 };
 
 Dog::Dog(std::string name, double height, double weight, std::string sound): Animal(name, height, weight) {
     this->sound = sound;
+}
+
+Dog::~Dog() {
+    std::cout << "Dog " << this->getName() << " destroyed\n";
 }
 
 void Dog::toString(){
@@ -105,6 +109,8 @@ int main(int argc, char** argv){
 
     Dog popi("Popi", 35, 80, "Wuuuuuuoffff");
     popi.toString();
+
+    std::cout << "Number of animals " << Animal::getNumOfAnimals() << std::endl;
 
     return 0;
 } 
