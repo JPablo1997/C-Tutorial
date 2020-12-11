@@ -53,7 +53,7 @@ void Warrior::toString(){
 class Battle{
 
     public:
-        static void fight(Warrior warrior1, Warrior warrior2){
+        static void fight(Warrior& warrior1, Warrior& warrior2){
            //impar ataca warrior1
            //par ataca warrior2
 
@@ -81,7 +81,7 @@ class Battle{
         }
 
     private:    
-        static void getAttackResults(Warrior warrior1, Warrior warrior2){
+        static void getAttackResults(Warrior& warrior1, Warrior& warrior2){
             std::string result = " ";
             if(warrior1.getLive() <= 0){
                 warrior1.setLive(0);
