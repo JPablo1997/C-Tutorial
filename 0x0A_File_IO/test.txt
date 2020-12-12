@@ -1,0 +1,2 @@
+Beginning of File
+Hello World, these is a file
