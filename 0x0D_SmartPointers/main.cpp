@@ -28,7 +28,7 @@ int main(){
     for(int i = 0; i < amtToStore; i++){
         std::cout << "Numero " << (i + 1) << ": " << pNums[i] << " on Memory Address: " << &pNums[i] << std::endl;
     }
-
+    do sometrhing;
     delete pNums;
 
     return 0;
